@@ -5,3 +5,7 @@ jdk:
 script:
   -  mvn install -Pjdk7
   -  mvn install -Pjdk8
+before_install:
+  - pip install --user codecov
+after_success:
+  - codecov
